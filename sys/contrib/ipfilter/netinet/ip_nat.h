@@ -44,23 +44,23 @@
 			 */
 #ifndef NAT_SIZE
 # ifdef LARGE_NAT
-#  define	NAT_SIZE	2047
+#  define	NAT_SIZE	4095
 # else
-#  define	NAT_SIZE	127
+#  define	NAT_SIZE	4095
 # endif
 #endif
 #ifndef RDR_SIZE
 # ifdef LARGE_NAT
-#  define	RDR_SIZE	2047
+#  define	RDR_SIZE	4095
 # else
-#  define	RDR_SIZE	127
+#  define	RDR_SIZE	4095
 # endif
 #endif
 #ifndef HOSTMAP_SIZE
 # ifdef LARGE_NAT
-#  define	HOSTMAP_SIZE	8191
+#  define	HOSTMAP_SIZE	16383
 # else
-#  define	HOSTMAP_SIZE	2047
+#  define	HOSTMAP_SIZE	16383
 # endif
 #endif
 #ifndef NAT_TABLE_MAX
@@ -69,16 +69,16 @@
  * present aren't what we'd normally use for creating a proper hash table.
  */
 # ifdef	LARGE_NAT
-#  define	NAT_TABLE_MAX	180000
+#  define	NAT_TABLE_MAX	500000
 # else
-#  define	NAT_TABLE_MAX	30000
+#  define	NAT_TABLE_MAX	500000
 # endif
 #endif
 #ifndef NAT_TABLE_SZ
 # ifdef LARGE_NAT
-#  define	NAT_TABLE_SZ	16383
+#  define	NAT_TABLE_SZ	32767
 # else
-#  define	NAT_TABLE_SZ	2047
+#  define	NAT_TABLE_SZ	32767
 # endif
 #endif
 #ifndef	APR_LABELLEN
